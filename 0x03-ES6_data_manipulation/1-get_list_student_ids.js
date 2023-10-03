@@ -1,9 +1,9 @@
 function getListStudentIds(list) {
-    if (!Array.isArray(list)) {
-        return [];
-    }
+  if (!Array.isArray(list)) {
+    return [];
+  }
 
-    return list.map((item) => item.id);
+  return list.map((item) => item.id);
 }
 
 export default getListStudentIds;
