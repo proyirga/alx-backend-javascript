@@ -11,7 +11,7 @@ function updateStudentGradeByCity(list, city, newGrades) {
 		id: item.id, firstName: item.firstName, location: item.location, grade: grade.grade
 	};
       } else {
-              return {id: item.id, firstName: item.firstName, location: item.location, grade: "N/A"};
+              return { id: item.id, firstName: item.firstName, location: item.location, grade: "N/A"  };
       }
     });
 }
