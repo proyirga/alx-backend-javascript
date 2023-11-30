@@ -41,3 +41,5 @@ class HolbertonCourse {
     this._students = students;
   }
 }
+
+export default HolbertonCourse;
