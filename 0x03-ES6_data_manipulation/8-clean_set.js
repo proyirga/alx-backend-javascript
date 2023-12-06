@@ -1,23 +1,19 @@
 function cleanSet(inputSet, startString = '') {
+  // Check if startString is not a string
   if (typeof startString !== 'string') {
-    return '';
+    return ''; // or throw an error, depending on your requirements
   }
-  // Create an array to store the filtered values
-  const filteredValues = [];
 
-  // Iterate over the set elements
-  inputSet.forEach(value => {
-    // Check if the value starts with the specified startString
-    if (value.startsWith(startString)) {
-      // Append the rest of the string (after startString) to the array
-      filteredValues.push(value.slice(startString.length));
-    }
-  });
+  // Create an array to store all values of the set
+  const allValues = Array.from(inputSet);
 
-  // Join the filtered values with "-"
+  // Filter the values based on startString
+  const filteredValues = allValues
+    .filter(value => value.startsWith(startString))
+    .map(value => value.slice(startString.length));
+
+  // Join all values with "-"
   const resultString = filteredValues.join('-');
 
   return resultString;
 }
-
-export default cleanSet;
