@@ -1,8 +1,4 @@
 function cleanSet(inputSet, startString = '') {
-  // Check if startString is not a string
-  if (typeof startString !== 'string') {
-    return ''; // or throw an error, depending on your requirements
-  }
 
   // Create an array to store all values of the set
   const allValues = Array.from(inputSet);
