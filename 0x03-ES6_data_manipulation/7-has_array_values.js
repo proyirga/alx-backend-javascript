@@ -1,10 +1,13 @@
 function hasValuesFromArray(set, arr) {
-  for (let i = 0; i < arr.length; i+1) {
-    if (!set.has(arr[i])) {
-      return false;
+  let hasAllValues = true;
+
+  arr.forEach(element => {
+    if (!set.has(element)) {
+      hasAllValues = false;
     }
-  }
-  return true;
+  });
+
+  return hasAllValues;
 }
 
 export default hasValuesFromArray;
