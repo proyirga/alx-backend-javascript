@@ -1,4 +1,7 @@
-function cleanSet(inputSet, startString) {
+function cleanSet(inputSet, startString = '') {
+  if (typeof startString !== 'string') {
+    return '';
+  }
   // Create an array to store the filtered values
   const filteredValues = [];
 
