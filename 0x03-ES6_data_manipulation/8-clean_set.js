@@ -17,3 +17,5 @@ function cleanSet(inputSet, startString = '') {
 
   return resultString;
 }
+
+export default cleanSet;
